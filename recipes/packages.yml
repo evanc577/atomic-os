@@ -1,5 +1,6 @@
 type: rpm-ostree
 install:
+  - "fd-find"
   - "iotop"
   - "kitty"
   - "libvirt"
@@ -19,7 +20,6 @@ install:
   - "qemu-system-x86-core"
   - "qemu-user-binfmt"
   - "qemu-user-static"
-  - "rust-fd-find"
   - "syncthing"
   - "virt-manager"
   - "virt-v2v"
