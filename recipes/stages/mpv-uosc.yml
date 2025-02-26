@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/stage-v1.json
+
+name: mpv-uosc
+from: fedora
+
+modules:
+  - type: script
+    scripts: 
+      - pkgbuilds/mpv-uosc.sh
