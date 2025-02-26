@@ -19,9 +19,13 @@ install:
   - "qemu-system-x86-core"
   - "qemu-user-binfmt"
   - "qemu-user-static"
+  - "rust-fd-find"
   - "syncthing"
   - "virt-manager"
   - "virt-v2v"
   - "virt-viewer"
 remove:
+  - "kcm_ublue"
   - "ptyxis"
+  - "ublue-bling"
+  - "ublue-motd"
