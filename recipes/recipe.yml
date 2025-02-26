@@ -5,7 +5,7 @@ name: atomic-os
 description: This is my personal OS image.
 
 base-image: ghcr.io/ublue-os/aurora
-image-version: latest
+image-version: stable
 
 # Build custom packages
 stages:
