@@ -1,4 +1,6 @@
 type: rpm-ostree
+repos:
+  - "https://copr.fedorainfracloud.org/coprs/evanc577/packages/repo/fedora-%OS_VERSION%/evanc577-packages-fedora-%OS_VERSION%.repo"
 install:
   - "fd-find"
   - "iotop"
@@ -7,6 +9,8 @@ install:
   - "libvirt-nss"
   - "mozilla-fira-mono-fonts"
   - "mpv"
+  - "mpv-thumbfast"
+  - "mpv-uosc"
   - "neovim"
   - "nvtop"
   - "p7zip"

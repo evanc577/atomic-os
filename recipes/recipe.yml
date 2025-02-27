@@ -7,11 +7,6 @@ description: This is my personal OS image.
 base-image: ghcr.io/ublue-os/aurora
 image-version: stable
 
-# Build custom packages
-stages:
-  - from-file: stages/mpv-uosc.yml
-  - from-file: stages/mpv-thumbfast.yml
-
 modules:
   - type: files
     files:
@@ -20,15 +15,5 @@ modules:
 
   # Install fedora packages
   - from-file: packages.yml
-
-  # Install custom packages
-  - type: copy
-    from: mpv-uosc
-    src: /pkgbuild/build
-    dest: /
-  - type: copy
-    from: mpv-thumbfast
-    src: /pkgbuild/build
-    dest: /
 
   - type: signing
