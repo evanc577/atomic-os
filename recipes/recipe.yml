@@ -13,6 +13,10 @@ modules:
       - source: system
         destination: /
 
+  - type: bling
+    install:
+      - "rpmfusion"
+
   # Install fedora packages
   - from-file: packages.yml
 
