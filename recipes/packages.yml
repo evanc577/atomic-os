@@ -31,6 +31,8 @@ install:
   - "virt-viewer"
 remove:
   - "kcm_ublue"
+  - "nano-default-editor"
   - "ptyxis"
   - "ublue-bling"
+  - "ublue-fastfetch"
   - "ublue-motd"
