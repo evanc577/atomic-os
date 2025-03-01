@@ -26,7 +26,6 @@ install:
   - "mpv-thumbfast"
   - "mpv-uosc"
   - "neovim"
-  - "nerdfontssymbolsonly-nerd-fonts"
   - "nvtop"
   - "p7zip"
   - "p7zip-plugins"
@@ -37,10 +36,12 @@ install:
   - "rclone"
   - "stress-ng"
   - "syncthing"
-  - "topgrade"
   - "virt-manager"
   - "wireguard-tools"
   - "wl-clipboard"
   - "xprop"
   - "zsh"
+  # Install via Terra repo after https://github.com/blue-build/modules/pull/377
+  # - "nerdfontssymbolsonly-nerd-fonts"
+  # - "topgrade"
 remove: []
