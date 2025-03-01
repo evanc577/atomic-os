@@ -2,9 +2,9 @@ name: bluebuild
 on:
   schedule:
     - cron:
-        # build at 07:00 UTC every day
-        # aurora:stable seems to finish building at around 06:30 UTC
-        "00 07 * * *"
+        # build at 05:00 UTC every day
+        # kinoite-main seems to finish building at around 23:20 UTC
+        "00 05 * * *"
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"

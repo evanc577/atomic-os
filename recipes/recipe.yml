@@ -4,8 +4,8 @@
 name: atomic-os
 description: This is my personal OS image.
 
-base-image: ghcr.io/ublue-os/aurora
-image-version: stable-daily
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: latest
 
 modules:
   - type: files
