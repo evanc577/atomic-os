@@ -44,4 +44,6 @@ install:
   # Install via Terra repo after https://github.com/blue-build/modules/pull/377
   # - "nerdfontssymbolsonly-nerd-fonts"
   # - "topgrade"
-remove: []
+remove:
+  - "firefox"
+  - "firefox-langpacks"
