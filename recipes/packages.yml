@@ -38,6 +38,7 @@ install:
   - "pulseaudio-utils"
   - "qemu"
   - "rclone"
+  - "solaar"
   - "stress-ng"
   - "syncthing"
   - "virt-manager"
