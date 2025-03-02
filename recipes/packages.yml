@@ -5,6 +5,8 @@ install:
   - "beets"
   - "beets-plugins"
   - "bootc"
+  - "borgbackup"
+  - "borgmatic"
   - "ddcutil"
   - "evanc577-update-services"
   - "evtest"
