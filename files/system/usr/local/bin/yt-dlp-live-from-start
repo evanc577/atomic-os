@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ $# -lt 3 ]; then
+    echo Usage: $0 url output [additional params]
+    exit 1
+fi
+
+i=0
+while true; do
+    ((i++))
+    live_status="$(yt-dlp --skip-download --wait-for-video 10-60 --dump-json "$1" | jq -r '.live_status'; [[ "${PIPESTATUS[*]}" == "0 0" ]])"
+    if [ "$?" -eq 0 ]; then
+        if [ "$live_status" == "is_live" ]; then
+            echo downloading...
+            yt-dlp $1 -o ${2}.${i} ${@:3}
+        else
+            break
+        fi
+    else
+        break
+    fi
+done

@@ -2,8 +2,11 @@ type: rpm-ostree
 repos:
   - "https://copr.fedorainfracloud.org/coprs/evanc577/packages/repo/fedora-%OS_VERSION%/evanc577-packages-fedora-%OS_VERSION%.repo"
 install:
+  - "beets"
+  - "beets-plugins"
   - "bootc"
   - "ddcutil"
+  - "evanc577-update-services"
   - "evtest"
   - "fastfetch"
   - "fcitx5-chewing"
@@ -22,6 +25,7 @@ install:
   - "kitty"
   - "mozilla-fira-mono-fonts"
   - "mozilla-fira-sans-fonts"
+  - "mpd"
   - "mpv"
   - "mpv-thumbfast"
   - "mpv-uosc"
