@@ -11,19 +11,12 @@ install:
   - "evanc577-update-services"
   - "evtest"
   - "fastfetch"
-  - "fcitx5-chewing"
-  - "fcitx5-chinese-addons"
-  - "fcitx5-hangul"
-  - "fcitx5-mozc"
   - "fd-find"
   - "iotop"
-  - "kcm-fcitx5"
   - "kdenetwork-filesharing"
   - "kdeplasma-addons"
   - "kdialog"
   - "kitty"
-  - "mozilla-fira-mono-fonts"
-  - "mozilla-fira-sans-fonts"
   - "mpd"
   - "mpv"
   - "mpv-thumbfast"
@@ -46,6 +39,20 @@ install:
   - "wl-clipboard"
   - "xprop"
   - "zsh"
+
+  # IME
+  - "fcitx5-chewing"
+  - "fcitx5-chinese-addons"
+  - "fcitx5-hangul"
+  - "fcitx5-mozc"
+  - "kcm-fcitx5"
+
+  # Fonts
+  - "ibm-plex-fonts-all"
+  - "mozilla-fira-mono-fonts"
+  - "mozilla-fira-sans-fonts"
+  - "rsms-inter-fonts"
+
   # Install via Terra repo after https://github.com/blue-build/modules/pull/377
   # - "nerdfontssymbolsonly-nerd-fonts"
   # - "topgrade"
