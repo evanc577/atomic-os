@@ -1,70 +1,95 @@
-type: rpm-ostree
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+modules:
+  # General packages
+  - type: rpm-ostree
+    repos:
+      - "https://copr.fedorainfracloud.org/coprs/evanc577/packages/repo/fedora-%OS_VERSION%/evanc577-packages-fedora-%OS_VERSION%.repo"
+    install:
+      - "beets"
+      - "beets-plugins"
+      - "bootc"
+      - "borgbackup"
+      - "borgmatic"
+      - "ddcutil"
+      - "evanc577-update-services"
+      - "evtest"
+      - "fastfetch"
+      - "fd-find"
+      - "iotop"
+      - "kdenetwork-filesharing"
+      - "kdeplasma-addons"
+      - "kdialog"
+      - "kitty"
+      - "neovim"
+      - "nvtop"
+      - "p7zip"
+      - "p7zip-plugins"
+      - "plasma-wallpapers-dynamic"
+      - "powertop"
+      - "pulseaudio-utils"
+      - "qemu"
+      - "rclone"
+      - "snapper"
+      - "solaar"
+      - "stress-ng"
+      - "syncthing"
+      - "virt-manager"
+      - "wireguard-tools"
+      - "wl-clipboard"
+      - "xprop"
+      - "zsh"
 
-repos:
-  - "https://copr.fedorainfracloud.org/coprs/evanc577/packages/repo/fedora-%OS_VERSION%/evanc577-packages-fedora-%OS_VERSION%.repo"
-  - "https://pkg.cloudflare.com/cloudflared-ascii.repo"
+      # mpv
+      - "mpv"
+      - "mpv-thumbfast"
+      - "mpv-uosc"
 
-install:
-  - "beets"
-  - "beets-plugins"
-  - "bootc"
-  - "borgbackup"
-  - "borgmatic"
-  - "cloudflared"
-  - "ddcutil"
-  - "evanc577-update-services"
-  - "evtest"
-  - "fastfetch"
-  - "fd-find"
-  - "insync"
-  - "iotop"
-  - "kdenetwork-filesharing"
-  - "kdeplasma-addons"
-  - "kdialog"
-  - "kitty"
-  - "neovim"
-  - "nvtop"
-  - "p7zip"
-  - "p7zip-plugins"
-  - "plasma-wallpapers-dynamic"
-  - "powertop"
-  - "pulseaudio-utils"
-  - "qemu"
-  - "rclone"
-  - "snapper"
-  - "solaar"
-  - "stress-ng"
-  - "syncthing"
-  - "virt-manager"
-  - "wireguard-tools"
-  - "wl-clipboard"
-  - "xprop"
-  - "zsh"
+      # MPD
+      - "mpd"
+      - "mpdris2"
+      - "mpdscribble"
+      - "rmpc"
 
-  # mpv
-  - "mpv"
-  - "mpv-thumbfast"
-  - "mpv-uosc"
+      # IME
+      - "fcitx5-chewing"
+      - "fcitx5-chinese-addons"
+      - "fcitx5-hangul"
+      - "fcitx5-mozc"
+      - "kcm-fcitx5"
 
-  # MPD
-  - "mpd"
-  - "mpdris2"
-  - "mpdscribble"
-  - "rmpc"
+      # Fonts
+      - "ibm-plex-fonts-all"
+      - "mozilla-fira-mono-fonts"
+      - "mozilla-fira-sans-fonts"
+      - "rsms-inter-fonts"
+    remove:
+      - "firefox"
+      - "firefox-langpacks"
 
-  # IME
-  - "fcitx5-chewing"
-  - "fcitx5-chinese-addons"
-  - "fcitx5-hangul"
-  - "fcitx5-mozc"
-  - "kcm-fcitx5"
+  # Install packages from Terra repo
+  - type: install-from-repo
+    source: local
+    gpgkey: "https://repos.fyralabs.com/terra${OS_VERSION}/key.asc"
+    reponame: "terra"
+    repobaseurl: "https://repos.fyralabs.com/terra${OS_VERSION}"
+    packages:
+      - "chezmoi"
+      - "nerdfontssymbolsonly-nerd-fonts"
 
-  # Fonts
-  - "ibm-plex-fonts-all"
-  - "mozilla-fira-mono-fonts"
-  - "mozilla-fira-sans-fonts"
-  - "rsms-inter-fonts"
+  # Install insync
+  - type: install-from-repo
+    source: local
+    gpgkey: "https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key"
+    reponame: "insync"
+    repobaseurl: "http://yum.insync.io/fedora/${OS_VERSION}"
+    packages:
+      - "insync"
 
-remove:
-  - "firefox"
-  - "firefox-langpacks"
+  # Install cloudflared
+  - type: install-from-repo
+    source: local
+    gpgkey: "https://pkg.cloudflare.com/cloudflare-ascii-pubkey.gpg"
+    reponame: "cloudflared"
+    repobaseurl: "https://pkg.cloudflare.com/cloudflared/rpm"
+    packages:
+      - "cloudflared"
