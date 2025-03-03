@@ -76,15 +76,6 @@ modules:
       - "chezmoi"
       - "nerdfontssymbolsonly-nerd-fonts"
 
-  # Install insync
-  - type: install-from-repo
-    source: local
-    gpgkey: "https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key"
-    reponame: "insync"
-    repobaseurl: "http://yum.insync.io/fedora/${OS_VERSION}"
-    packages:
-      - "insync"
-
   # Install cloudflared
   - type: install-from-repo
     source: local
