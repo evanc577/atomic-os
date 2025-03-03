@@ -13,11 +13,17 @@ modules:
       - source: system
         destination: /
 
+  # Use rpmfusion instead of negativo17
   - type: bling
     install:
       - "rpmfusion"
 
-  # Install fedora packages
+  # Install packages
   - from-file: packages.yml
+
+  # Install nerd fonts from Terra repo
+  - type: script
+    snippets:
+      - "dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' nerdfontssymbolsonly-nerd-fonts"
 
   - type: signing
