@@ -22,10 +22,6 @@ install:
   - "kdeplasma-addons"
   - "kdialog"
   - "kitty"
-  - "mpd"
-  - "mpv"
-  - "mpv-thumbfast"
-  - "mpv-uosc"
   - "neovim"
   - "nvtop"
   - "p7zip"
@@ -35,7 +31,6 @@ install:
   - "pulseaudio-utils"
   - "qemu"
   - "rclone"
-  - "rmpc"
   - "snapper"
   - "solaar"
   - "stress-ng"
@@ -45,6 +40,17 @@ install:
   - "wl-clipboard"
   - "xprop"
   - "zsh"
+
+  # mpv
+  - "mpv"
+  - "mpv-thumbfast"
+  - "mpv-uosc"
+
+  # MPD
+  - "mpd"
+  - "mpdris2"
+  - "mpdscribble"
+  - "rmpc"
 
   # IME
   - "fcitx5-chewing"
@@ -58,10 +64,6 @@ install:
   - "mozilla-fira-mono-fonts"
   - "mozilla-fira-sans-fonts"
   - "rsms-inter-fonts"
-
-  # Install via Terra repo after https://github.com/blue-build/modules/pull/377
-  # - "nerdfontssymbolsonly-nerd-fonts"
-  # - "topgrade"
 
 remove:
   - "firefox"
