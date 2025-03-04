@@ -33,6 +33,7 @@ modules:
       - "solaar"
       - "stress-ng"
       - "syncthing"
+      - "tailscale"
       - "virt-manager"
       - "wireguard-tools"
       - "wl-clipboard"
@@ -75,12 +76,3 @@ modules:
     packages:
       - "chezmoi"
       - "nerdfontssymbolsonly-nerd-fonts"
-
-  # Install cloudflared
-  - type: install-from-repo
-    source: local
-    gpgkey: "https://pkg.cloudflare.com/cloudflare-ascii-pubkey.gpg"
-    reponame: "cloudflared"
-    repobaseurl: "https://pkg.cloudflare.com/cloudflared/rpm"
-    packages:
-      - "cloudflared"
