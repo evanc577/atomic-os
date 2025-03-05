@@ -21,4 +21,14 @@ modules:
   # Install packages
   - from-file: packages.yml
 
+  - type: default-flatpaks
+    user:
+      install:
+        - "com.github.tchx84.Flatseal"
+        - "com.protonvpn.www"
+        - "com.spotify.Client"
+        - "dev.vencord.Vesktop"
+        - "org.mozilla.firefox"
+        - "org.pulseaudio.pavucontrol"
+
   - type: signing
