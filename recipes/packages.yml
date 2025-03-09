@@ -10,6 +10,7 @@ modules:
       - "bootc"
       - "borgbackup"
       - "borgmatic"
+      - "darktable"
       - "ddcutil"
       - "evanc577-update-services"
       - "evtest"
