@@ -41,6 +41,7 @@ modules:
       - "syncthing"
       - "tailscale"
       - "virt-manager"
+      - "virt-viewer"
       - "wireguard-tools"
       - "wl-clipboard"
       - "xprop"
