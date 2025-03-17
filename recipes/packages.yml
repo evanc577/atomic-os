@@ -6,6 +6,7 @@ modules:
       - "https://copr.fedorainfracloud.org/coprs/evanc577/packages/repo/fedora-%OS_VERSION%/evanc577-packages-fedora-%OS_VERSION%.repo"
       - "https://copr.fedorainfracloud.org/coprs/ilyaz/LACT/repo/fedora-%OS_VERSION%/ilyaz-LACT-fedora-%OS_VERSION%.repo"
     install:
+      - "auto-knight"
       - "beets"
       - "beets-plugins"
       - "bootc"
