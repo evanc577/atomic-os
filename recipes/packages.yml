@@ -30,6 +30,7 @@ modules:
       - "p7zip"
       - "p7zip-plugins"
       - "plasma-wallpapers-dynamic"
+      - "podman-compose"
       - "powertop"
       - "pulseaudio-utils"
       - "qemu"
