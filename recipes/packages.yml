@@ -51,6 +51,7 @@ modules:
       - "tailscale"
       - "virt-manager"
       - "virt-viewer"
+      - "waydroid"
       - "wireguard-tools"
       - "wl-clipboard"
       - "xprop"
