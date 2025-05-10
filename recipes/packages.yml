@@ -1,95 +1,101 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
 modules:
   # General packages
-  - type: rpm-ostree
+  - type: dnf
     repos:
-      - "https://copr.fedorainfracloud.org/coprs/evanc577/packages/repo/fedora-%OS_VERSION%/evanc577-packages-fedora-%OS_VERSION%.repo"
-      - "https://copr.fedorainfracloud.org/coprs/ilyaz/LACT/repo/fedora-%OS_VERSION%/ilyaz-LACT-fedora-%OS_VERSION%.repo"
+      nonfree: rpmfusion
+      copr:
+        - evanc577/packages
+        - ilyaz/LACT
+      files:
+        - terra.repo
     install:
-      - "auto-knight"
-      - "beets"
-      - "beets-plugins"
-      - "bootc"
-      - "borgbackup"
-      - "borgmatic"
-      - "darktable"
-      - "ddcutil"
-      - "evanc577-update-services"
-      - "evtest"
-      - "fastfetch"
-      - "fd-find"
-      - "gameconqueror"
-      - "gwenview"
-      - "iotop"
-      - "kdenetwork-filesharing"
-      - "kdeplasma-addons"
-      - "kdialog"
-      - "kitty"
-      - "lact"
-      - "neovim"
-      - "nvtop"
-      - "okular"
-      - "p7zip"
-      - "p7zip-plugins"
-      - "plasma-wallpapers-dynamic"
-      - "podlet"
-      - "podman-compose"
-      - "powertop"
-      - "pulseaudio-utils"
-      - "qalculate"
-      - "qalculate-qt"
-      - "qemu"
-      - "rclone"
-      - "rocm-hip"
-      - "rocm-opencl"
-      - "rocm-smi"
-      - "scanmem"
-      - "snapper"
-      - "solaar"
-      - "stress-ng"
-      - "syncthing"
-      - "tailscale"
-      - "virt-manager"
-      - "virt-viewer"
-      - "waydroid"
-      - "wireguard-tools"
-      - "wl-clipboard"
-      - "xprop"
-      - "zsh"
+      packages:
+        # Custom Repos
+        - repo: copr:copr.fedorainfracloud.org:evanc577:packages
+          packages:
+            - "auto-knight"
+            - "evanc577-update-services"
+            - "mpv-thumbfast"
+            - "mpv-uosc"
+            - "rmpc"
+        - repo: copr:copr.fedorainfracloud.org:ilyaz:LACT
+          packages:
+            - "lact"
+        - repo: terra
+          packages:
+            - "chezmoi"
+            - "nerdfontssymbolsonly-nerd-fonts"
 
-      # mpv
-      - "mpv"
-      - "mpv-thumbfast"
-      - "mpv-uosc"
+        # Fedora Repos
+        # General
+        - "beets"
+        - "beets-plugins"
+        - "bootc"
+        - "borgbackup"
+        - "borgmatic"
+        - "darktable"
+        - "ddcutil"
+        - "evtest"
+        - "fastfetch"
+        - "fd-find"
+        - "gameconqueror"
+        - "gwenview"
+        - "iotop"
+        - "kdenetwork-filesharing"
+        - "kdeplasma-addons"
+        - "kdialog"
+        - "kitty"
+        - "lact"
+        - "mpd"
+        - "mpdris2"
+        - "mpdscribble"
+        - "mpv"
+        - "neovim"
+        - "nvtop"
+        - "okular"
+        - "p7zip"
+        - "p7zip-plugins"
+        - "plasma-wallpapers-dynamic"
+        - "podlet"
+        - "podman-compose"
+        - "powertop"
+        - "pulseaudio-utils"
+        - "qalculate"
+        - "qalculate-qt"
+        - "qemu"
+        - "rclone"
+        - "rocm-hip"
+        - "rocm-opencl"
+        - "rocm-smi"
+        - "scanmem"
+        - "snapper"
+        - "solaar"
+        - "stress-ng"
+        - "syncthing"
+        - "tailscale"
+        - "virt-manager"
+        - "virt-viewer"
+        - "waydroid"
+        - "wireguard-tools"
+        - "wl-clipboard"
+        - "xprop"
+        - "zsh"
 
-      # MPD
-      - "mpd"
-      - "mpdris2"
-      - "mpdscribble"
-      - "rmpc"
+        # IME
+        - "fcitx5-chewing"
+        - "fcitx5-chinese-addons"
+        - "fcitx5-hangul"
+        - "fcitx5-mozc"
+        - "kcm-fcitx5"
 
-      # IME
-      - "fcitx5-chewing"
-      - "fcitx5-chinese-addons"
-      - "fcitx5-hangul"
-      - "fcitx5-mozc"
-      - "kcm-fcitx5"
+        # Fonts
+        - "ibm-plex-fonts-all"
+        - "mozilla-fira-mono-fonts"
+        - "mozilla-fira-sans-fonts"
+        - "rsms-inter-fonts"
 
-      # Fonts
-      - "ibm-plex-fonts-all"
-      - "mozilla-fira-mono-fonts"
-      - "mozilla-fira-sans-fonts"
-      - "rsms-inter-fonts"
     remove:
-      - "firefox"
-      - "firefox-langpacks"
-
-  # Install packages from Terra repo
-  - type: install-from-repo
-    source: local
-    gpgkey: "https://repos.fyralabs.com/terra${OS_VERSION}/key.asc"
-    reponame: "terra"
-    repobaseurl: "https://repos.fyralabs.com/terra${OS_VERSION}"
-    packages:
-      - "chezmoi"
-      - "nerdfontssymbolsonly-nerd-fonts"
+      packages:
+        - "firefox"
+        - "firefox-langpacks"

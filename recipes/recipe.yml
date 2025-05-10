@@ -13,11 +13,6 @@ modules:
       - source: system
         destination: /
 
-  # Use rpmfusion instead of negativo17
-  - type: bling
-    install:
-      - "rpmfusion"
-
   # Install packages
   - from-file: packages.yml
 
