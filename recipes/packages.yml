@@ -61,6 +61,7 @@ modules:
         - "podman-compose"
         - "powertop"
         - "pulseaudio-utils"
+        - "pulseview"
         - "qalculate"
         - "qalculate-qt"
         - "qemu"
