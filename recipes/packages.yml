@@ -61,7 +61,6 @@ modules:
         - "podman-compose"
         - "powertop"
         - "pulseaudio-utils"
-        - "pulseview"
         - "qalculate"
         - "qalculate-qt"
         - "qemu"
@@ -95,6 +94,10 @@ modules:
         - "mozilla-fira-mono-fonts"
         - "mozilla-fira-sans-fonts"
         - "rsms-inter-fonts"
+
+        # Embedded dev
+        - "pulseview"
+        - "sigrok-firmware-fx2lafw"
 
     remove:
       packages:
