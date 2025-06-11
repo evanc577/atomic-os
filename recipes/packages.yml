@@ -8,6 +8,7 @@ modules:
         - evanc577/packages
         - ilyaz/LACT
       files:
+        - https://download.opensuse.org/repositories/home:paul4us/Fedora_%OS_VERSION%/home:paul4us.repo
         - terra.repo
     install:
       packages:
@@ -22,6 +23,9 @@ modules:
         - repo: copr:copr.fedorainfracloud.org:ilyaz:LACT
           packages:
             - "lact"
+        - repo: home_paul4us
+          packages:
+            - "klassy"
         - repo: terra
           packages:
             - "chezmoi"
