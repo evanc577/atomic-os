@@ -40,3 +40,13 @@ jobs:
           pr_event_number: ${{ github.event.number }}
           rechunk: true
           maximize_build_space: true
+  rerun-on-failure:
+    needs: bluebuild
+    if: failure() && fromJSON(github.run_attempt) < 3
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+          GH_DEBUG: api
+        run: gh workflow run rerun.yml -r ${{ github.head_ref || github.ref_name }} -F run_id=${{ github.run_id }}
