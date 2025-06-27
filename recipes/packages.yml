@@ -38,6 +38,7 @@ modules:
         - "bootc"
         - "borgbackup"
         - "borgmatic"
+        - "cava"
         - "darktable"
         - "ddcutil"
         - "evtest"
