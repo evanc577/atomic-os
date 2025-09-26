@@ -7,6 +7,7 @@ modules:
       copr:
         - evanc577/packages
         - ilyaz/LACT
+        - brycensranch/gpu-screen-recorder-git
       files:
         - https://download.opensuse.org/repositories/home:paul4us/Fedora_%OS_VERSION%/home:paul4us.repo
         - terra.repo
@@ -23,6 +24,12 @@ modules:
         - repo: copr:copr.fedorainfracloud.org:ilyaz:LACT
           packages:
             - "lact"
+        - repo: copr:copr.fedorainfracloud.org:brycensranch:gpu-screen-recorder-git
+          packages:
+            - "gpu-screen-recorder"
+            - "gpu-screen-recorder-gtk"
+            - "gpu-screen-recorder-notification"
+            - "gpu-screen-recorder-ui"
         - repo: home_paul4us
           packages:
             - "klassy"
