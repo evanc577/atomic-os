@@ -50,6 +50,7 @@ modules:
         - "evtest"
         - "fastfetch"
         - "fd-find"
+        - "flatpak-builder"
         - "gameconqueror"
         - "gwenview"
         - "iotop"
