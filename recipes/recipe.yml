@@ -16,6 +16,12 @@ modules:
   # Install packages
   - from-file: packages.yml
 
+  - type: kargs
+    kargs:
+      - preempt=full
+      - nohz_full=all
+      - threadirqs
+
   - type: default-flatpaks
     configurations:
       - scope: user
