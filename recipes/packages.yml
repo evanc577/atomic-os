@@ -9,7 +9,6 @@ modules:
         - ilyaz/LACT
         - brycensranch/gpu-screen-recorder-git
       files:
-        - https://download.opensuse.org/repositories/home:paul4us/Fedora_%OS_VERSION%/home:paul4us.repo
         - terra.repo
     install:
       packages:
@@ -18,6 +17,7 @@ modules:
           packages:
             - "auto-knight"
             - "evanc577-update-services"
+            - "klassy"
             - "mpv-thumbfast"
             - "mpv-uosc"
             - "rmpc"
@@ -29,9 +29,6 @@ modules:
             - "gpu-screen-recorder"
             - "gpu-screen-recorder-notification"
             - "gpu-screen-recorder-ui"
-        - repo: home_paul4us
-          packages:
-            - "klassy"
         - repo: terra
           packages:
             - "chezmoi"
