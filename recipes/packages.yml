@@ -101,8 +101,6 @@ modules:
 
         # Fonts
         - "ibm-plex-fonts-all"
-        - "mozilla-fira-mono-fonts"
-        - "mozilla-fira-sans-fonts"
         - "rsms-inter-fonts"
 
         # Embedded dev
