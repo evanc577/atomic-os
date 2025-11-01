@@ -13,6 +13,11 @@ modules:
       - source: system
         destination: /
 
+  # Prevent partial plasma upgrades
+  - type: script
+    snippets:
+      - "dnf5 versionlock add plasma-desktop"
+
   # Install packages
   - from-file: packages.yml
 
