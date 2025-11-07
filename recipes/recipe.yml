@@ -38,4 +38,10 @@ modules:
           - "org.mozilla.firefox"
           - "org.pulseaudio.pavucontrol"
 
+  - type: systemd
+    system:
+      enabled:
+        - snapper-timeline.timer
+        - snapper-cleanup.timer
+
   - type: signing
