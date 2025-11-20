@@ -32,6 +32,7 @@ modules:
         - repo: terra
           packages:
             - "chezmoi"
+            - "deno"
             - "nerdfontssymbolsonly-nerd-fonts"
 
         # Fedora Repos
