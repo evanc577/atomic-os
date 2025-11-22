@@ -43,5 +43,6 @@ modules:
       enabled:
         - snapper-timeline.timer
         - snapper-cleanup.timer
+        - scx_loader.service
 
   - type: signing
