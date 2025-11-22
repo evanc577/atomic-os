@@ -5,9 +5,11 @@ modules:
     repos:
       nonfree: rpmfusion
       copr:
+        - bieszczaders/kernel-cachyos-addons
+        - brycensranch/gpu-screen-recorder-git
         - evanc577/packages
         - ilyaz/LACT
-        - brycensranch/gpu-screen-recorder-git
+        - lizardbyte/stable
       files:
         - terra.repo
     install:
@@ -29,6 +31,12 @@ modules:
             - "gpu-screen-recorder"
             - "gpu-screen-recorder-notification"
             - "gpu-screen-recorder-ui"
+        - repo: copr:copr.fedorainfracloud.org:lizardbyte:stable
+          packages:
+            - Sunshine
+        - repo: copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons
+          packages:
+            - scx-scheds
         - repo: terra
           packages:
             - "chezmoi"
