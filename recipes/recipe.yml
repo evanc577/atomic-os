@@ -21,6 +21,11 @@ modules:
   # Install packages
   - from-file: packages.yml
 
+  # set admin cap on sunshine
+  - type: script
+    snippets:
+      - "setcap 'cap_sys_admin+p' $(readlink -f /usr/bin/sunshine)"
+
   - type: kargs
     kargs:
       - preempt=full
