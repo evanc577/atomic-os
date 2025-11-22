@@ -9,7 +9,6 @@ modules:
         - brycensranch/gpu-screen-recorder-git
         - evanc577/packages
         - ilyaz/LACT
-        - lizardbyte/beta
       files:
         - terra.repo
     install:
@@ -31,9 +30,6 @@ modules:
             - "gpu-screen-recorder"
             - "gpu-screen-recorder-notification"
             - "gpu-screen-recorder-ui"
-        - repo: copr:copr.fedorainfracloud.org:lizardbyte:beta
-          packages:
-            - Sunshine
         - repo: copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons
           packages:
             - scx-scheds
