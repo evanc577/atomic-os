@@ -53,6 +53,7 @@ modules:
         - "flatpak-builder"
         - "gameconqueror"
         - "gwenview"
+        - "hidapi"
         - "iotop"
         - "kdenetwork-filesharing"
         - "kdeplasma-addons"
