@@ -9,7 +9,6 @@ modules:
         - brycensranch/gpu-screen-recorder-git
         - evanc577/packages
         - ilyaz/LACT
-        - lizardbyte/beta
       files:
         - terra.repo
     install:
@@ -111,7 +110,6 @@ modules:
         - "sigrok-firmware-fx2lafw"
 
         # COPR
-        - Sunshine
         - scx-scheds
 
 
