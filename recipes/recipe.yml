@@ -24,6 +24,7 @@ modules:
 
   - type: default-flatpaks
     configurations:
+      - notify: false
       - scope: user
         install:
           - "com.github.tchx84.Flatseal"
