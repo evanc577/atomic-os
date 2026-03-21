@@ -61,6 +61,7 @@ modules:
         - "kdialog"
         - "kitty"
         - "lact"
+        - "lm_sensors"
         - "mpd"
         - "mpdris2"
         - "mpdscribble"
