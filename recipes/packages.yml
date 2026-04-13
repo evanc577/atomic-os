@@ -92,6 +92,7 @@ modules:
         - "stress-ng"
         - "syncthing"
         - "tailscale"
+        - "ublue-os-udev-rules"
         - "virt-manager"
         - "virt-viewer"
         - "waydroid"
