@@ -82,6 +82,7 @@ modules:
         - "qemu"
         - "rclone"
         - "realtime-setup"
+        - "retroarch"
         - "rocm-hip"
         - "rocm-opencl"
         - "rocm-smi"
